@@ -1,0 +1,67 @@
+# Import Package and make object
+import turtle as ng
+
+# Set Screen Size
+ng.setup(1000,1000)
+ng.title("National Flag of Nigeria - 🇳🇬")
+
+# Move Turtle to Start Location
+ng.penup()
+ng.goto(-150, -50)
+ng.pendown()
+
+# Set Screen Background Color
+ng.bgcolor("#dbf0fe")
+
+# Define Function That Creates Green Part of Flag
+def green_part():
+    ng.pencolor("green")
+    ng.fillcolor("green")
+    ng.begin_fill()
+    ng.speed(1)
+    ng.forward(100)
+    ng.left(90)
+    ng.forward(200)
+    ng.left(90)
+    ng.forward(100)
+    ng.left(90)
+    ng.forward(200)
+    ng.left(90)
+    ng.penup()
+    ng.forward(100)
+    ng.end_fill()
+
+ng.pendown()
+
+# Define Function That Creates White Part of Flag
+def white_part():
+    ng.pencolor("white")
+    ng.fillcolor("white")
+    ng.begin_fill()
+    ng.speed(1)
+    ng.forward(100)
+    ng.left(90)
+    ng.forward(200)
+    ng.left(90)
+    ng.forward(100)
+    ng.left(90)
+    ng.forward(200)
+    ng.left(90)
+    ng.penup()
+    ng.forward(100)
+    ng.end_fill()
+
+# Call Functions in Order
+green_part()
+white_part()
+green_part()
+
+# Go to Writing Position and Write Text
+ng.goto(-100, -100)
+ng.pendown()
+ng.color("#4c9a2a","#4c9a2a") # Set Pen Color
+ng.speed(0.5)
+ng.write("Arise, O Compatriots 🇳🇬", \
+         font=("chiller", 20, 'normal', 'bold'))
+
+ng.hideturtle()
