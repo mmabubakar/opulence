@@ -2,7 +2,7 @@
 import turtle as t
 
 # Create a function that does rectangle shape
-def rectangle(horizontal, vertical, color)
+def rectangle(horizontal, vertical, color):
     t.pendown()
     t.pensize(1)
     t.color(color)
@@ -30,8 +30,43 @@ rectangle(50,20, 'blue')
 
 # Drawing The Legs of Our Worker
 t.goto(-25, -50)
-rectangle(15, 100, 'grey')
+rectangle(15, 100, 'grey') # Left Leg
 t.goto(-55, -50)
-rectangle(-15, 100, 'grey')
+rectangle(-15, 100, 'grey') # Right Leg
 
+# Drawing The Body of Our Worker
+t.goto(-90, 100)
+rectangle(100, 150, 'red')
 
+# Drawing The Hands of Our Worker
+t.goto(-150, 70)
+rectangle(60, 15, 'grey') # Upper Right Hand
+t.goto(-150, 110)
+rectangle(15, 40, 'grey') # Lower Right Hand
+
+t.goto(10, 70)
+rectangle(60, 15, 'grey') # Upper Left Hand
+t.goto(55, 110)
+rectangle(15, 40, 'grey') # Lower Left Hand
+
+# Drawing The Neck of Our Worker
+t.goto(-50, 120)
+rectangle(15, 20, 'grey')
+
+# Drawing The Head of Our Worker
+t.goto(-85, 170)
+rectangle(80, 50, 'red')
+
+# Drawing The Eyes of Our Worker
+t.goto(-60, 160)
+rectangle(30, 10, 'white') # The white part of the eyes
+t.goto(-55, 155)
+rectangle(5, 5, 'black') # The black part of the eyes (The Right Pupil)
+t.goto(-40, 155)
+rectangle(5, 5, 'black') # The black part of the eyes (The Left Pupil)
+
+# Drawing The Mouth of Our Worker
+t.goto(-65, 135)
+rectangle(40, 5, 'black')
+
+t.hideturtle() # Hide The Turtle Pointer
